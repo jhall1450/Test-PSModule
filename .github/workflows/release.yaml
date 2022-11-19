@@ -23,7 +23,7 @@ jobs:
       - name: create manifest file
         shell: pwsh
         run: |
-          New-ModuleManifest -Path Test-PSModule.psm1 -ModuleVersion ${{ env.RELEASE_VERSION }} -Author "Justin Hall"
+          New-ModuleManifest -Path Test-PSModule.psd1 -ModuleVersion ${{ env.RELEASE_VERSION }} -Author "Justin Hall"
 
       - name: setup directory structure
         run: |
