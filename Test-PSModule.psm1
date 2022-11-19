@@ -15,3 +15,5 @@ function Set-PSFunction {
 
     Write-Output "You want to change: $TestInput" 
 }
+
+Export-ModuleMember -Function Test-PSFunction, Set-PSFunction
