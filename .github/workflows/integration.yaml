@@ -18,4 +18,5 @@ jobs:
           recurse: true 
           output: results.sarif
 
-     - run: pwd
+      - name: print working directory 
+        run: pwd
