@@ -1,4 +1,4 @@
-name: PSScriptAnalyzer
+name: integration
 
 on:
   push:
@@ -6,15 +6,14 @@ on:
   workflow_dispatch:
 
 jobs:
-  validate-data:
+  psscriptanalyzer:
     permissions:
       contents: read
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
 
-      - name: Run PSScriptAnalyzer
-        uses: microsoft/psscriptanalyzer-action@v1.1
+      - uses: microsoft/psscriptanalyzer-action@v1.1
         with:
           path: .\
           recurse: true 
