@@ -1,4 +1,4 @@
-name: integration
+name: release
 
 on:
   release:
