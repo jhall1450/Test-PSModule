@@ -17,3 +17,5 @@ jobs:
           path: .\
           recurse: true 
           output: results.sarif
+
+     - run: pwd
