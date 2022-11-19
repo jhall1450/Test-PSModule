@@ -3,6 +3,7 @@ name: PSScriptAnalyzer
 on:
   push:
   pull_request:
+  workflow_dispatch:
 
 jobs:
   validate-data:
@@ -15,6 +16,6 @@ jobs:
       - name: Run PSScriptAnalyzer
         uses: microsoft/psscriptanalyzer-action@v1.0
         with:
-          path: .\
+          path: 
           recurse: true 
           output: results.sarif
