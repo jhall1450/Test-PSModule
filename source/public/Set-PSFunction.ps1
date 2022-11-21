@@ -1,5 +1,5 @@
 function Set-PSFunction {
-    [CmdletBinding()] 
+    [CmdletBinding(SupportsShouldProcess)] 
     param (
         [Parameter()] [String] $TestInput
     )
