@@ -28,12 +28,9 @@ jobs:
           echo $RELEASE_VERSION
           echo ${{ env.RELEASE_VERSION }}
 
-      - name: change to source dir
-        run: cd source
-
       - name: build module
         shell: pwsh
-        run: Build-Module -SemVer ${{ env.RELEASE_VERSION }}
+        run: Build-Module -SourcePath "source/build.psd1" -SemVer ${{ env.RELEASE_VERSION }}
 
       - name: zip up the module dir
         uses: vimtor/action-zip@v1
