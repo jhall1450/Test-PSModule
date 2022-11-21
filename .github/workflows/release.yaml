@@ -18,7 +18,9 @@ jobs:
 
       - name: install build dependancies
         shell: pwsh
-        run: Install-Module -Name ModuleBuilder -RequiredVersion 2.0.0
+        run: | 
+          Install-Module -Name ModuleBuilder -RequiredVersion 2.0.0
+          Install-Module -Name Configuration -RequiredVersion 1.5.1
 
       - name: Set env
         run: echo "RELEASE_VERSION=${GITHUB_REF#refs/*/}" >> $GITHUB_ENV
