@@ -24,7 +24,9 @@ jobs:
           echo $RELEASE_VERSION
           echo ${{ env.RELEASE_VERSION }}
 
-      - name: 
+      - name: build module
+        shell: pwsh
+        run: Build-Module -SemVer ${{ env.RELEASE_VERSION }}
 
       - name: zip up the module dir
         uses: vimtor/action-zip@v1
