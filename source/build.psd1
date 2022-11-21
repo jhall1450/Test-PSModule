@@ -3,6 +3,6 @@
 @{
     ModuleManifest  = "Test-PSModule.psd1"
     # Subsequent relative paths are to the ModuleManifest
-    OutputDirectory = "../"
+    OutputDirectory = "../Test-PSModule/"
     VersionedOutputDirectory = $true
 }
