@@ -12,9 +12,13 @@ jobs:
     steps:
       - uses: actions/checkout@v3
 
+      - name: set PSGallery as trusted repo
+        shell: pwsh
+        run: Set-PSRepository -Name 'PSGallery' -InstallationPolicy Trusted
+
       - name: install build dependancies
         shell: pwsh
-        run: Install-Module -Name ModuleBuilder -RequiredVersion 2.0.0 -Confirm:$false
+        run: Install-Module -Name ModuleBuilder -RequiredVersion 2.0.0
 
       - name: Set env
         run: echo "RELEASE_VERSION=${GITHUB_REF#refs/*/}" >> $GITHUB_ENV
